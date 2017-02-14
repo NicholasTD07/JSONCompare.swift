@@ -20,7 +20,7 @@ let jsonValue = json(fromFile: "root_object")
  }
 */
 
-let expected: JSON = .object(
+let expected: JSON = .object([
    "title": .string("JSONCompare"),
    "isOpensource": .bool(true),
    "stars": .number(999),
@@ -28,7 +28,7 @@ let expected: JSON = .object(
      .string("v1.0.0: Equatable"),
      .string("v2.0.0: Diff"),
    ])
-)
+])
 
 print(JSON(jsonValue) == expected) // => true
 ```
