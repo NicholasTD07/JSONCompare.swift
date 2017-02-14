@@ -1,17 +1,24 @@
 import XCTest
-@testable import JSONCompare
+import JSONCompare
 
 class JSONCompareTests: XCTestCase {
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        XCTAssertEqual(JSONCompare().text, "Hello, World!")
+    func testComparingArray() {
+        let jsonValue = json(fromFile: "root_array")!
+
+        XCTAssertNotNil(jsonValue)
+        XCTAssertEqual(
+            JSON(jsonValue),
+            .array([
+                .string("a"),
+                .string("b"),
+                .string("c"),
+            ])
+        )
     }
 
 
     static var allTests : [(String, (JSONCompareTests) -> () throws -> Void)] {
         return [
-            ("testExample", testExample),
         ]
     }
 }
