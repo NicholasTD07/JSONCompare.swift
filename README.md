@@ -14,8 +14,8 @@ let jsonValue = json(fromFile: "root_object")
    "isOpensource": true,
    "stars": 999,
    "versions": [
-     "v1.0.0 - Equatable",
-     "v2.0.0 - Diff"
+     "v1.0.0: Equatable",
+     "v2.0.0: Diff"
    ]
  }
 */
